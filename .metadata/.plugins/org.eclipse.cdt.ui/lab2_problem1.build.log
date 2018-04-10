@@ -2,6 +2,16 @@
 **** Build of configuration Debug for project lab2_problem1 ****
 
 "C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-gmake: Nothing to be done for `all'.
+'Building file: ../ISRs.c'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
+'Finished building: ../ISRs.c'
+' '
+'Building target: lab2_problem1.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem1.out'
+' '
 
 **** Build Finished ****
