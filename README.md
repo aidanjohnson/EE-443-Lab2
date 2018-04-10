@@ -13,28 +13,28 @@ Incomplete:
 Status: In Progress
 
 Complete:
-- 
+- N/A
 
 Incomplete:
-- 
+- C-callable assembly code for flipping
 
 ## Problem 3
 Status: In Progress
 
 Complete:
-- 
+- N/A
 
 Incomplete:
-- 
+- C-callable assembly code for autocorrelation
 
 ## Problem 4
 Status: In Progress
 
 Complete:
-- 
+- N/A
 
 Incomplete:
-- 
+- ?Pitch Shifte?
 
 
 ## Textbook
