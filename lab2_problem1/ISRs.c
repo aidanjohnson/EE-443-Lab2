@@ -27,8 +27,8 @@ volatile union {
 /* add any global variables here */
 float xLeft, xRight, yLeft, yRight;
 Uint32 oldest = 0; // index for buffer value
-#define DELAY 0.5 // seconds
-float BUFFER_LENGTH = DELAY * GetSampleFreq(); // buffer length in samples = sampling rate in Hz * delay in s
+#define DELAY 1 // seconds
+#define BUFFER_LENGTH DELAY*16000 // buffer length in samples = sampling rate in Hz * delay in s
 #pragma DATA_SECTION (buffer, "CE0"); // put "buffer" in SDRAM
 volatile float buffer[DELAY][BUFFER_LENGTH]; // space for left + right
 int DelaySamples = (int) BUFFER_LENGTH;  // can be manipulated by GEL file
@@ -69,7 +69,6 @@ interrupt void Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
 {                    
 	/* add any local variables here */
-	Uint32 newest;  // only used for infinite echo
 
  	if(CheckForOverrun())					// overrun error occurred (i.e. halted DSP)
 		return;								// so serial port is reset to recover
@@ -110,7 +109,6 @@ interrupt void Codec_ISR()
 
 	buffer[LEFT][oldest] = xLeft;
 	buffer[RIGHT][oldest] = xRight;
-	newest = oldest;
 	if (++oldest >= DelaySamples) // implement circular buffer
 		oldest = 0;
 

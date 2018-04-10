@@ -357,3 +357,6 @@ java.nio.channels.ClosedByInterruptException
 	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
 	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:84)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-10 13:06:27.948
+!MESSAGE Indexed 'lab2_problem2' (4 sources, 8 headers) in 0.44 sec: 734 declarations; 733 references; 0 unresolved inclusions; 61 syntax errors; 16 unresolved names (1.1%)

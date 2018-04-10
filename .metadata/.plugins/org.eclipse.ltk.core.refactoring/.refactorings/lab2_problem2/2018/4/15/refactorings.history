@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;lab2_problem2/flip.asm&apos; to &apos;flip_512.asm&apos;" description="Rename resource &apos;flip.asm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="flip.asm" name="flip_512.asm" stamp="1523390811790" updateReferences="true"/>
+</session>
