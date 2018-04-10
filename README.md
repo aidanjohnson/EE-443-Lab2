@@ -1,4 +1,4 @@
-# EE 443 Lab1
+# EE 443 Lab 2
 
 ## Problem 1
 Status: In Progress
