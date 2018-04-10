@@ -4,10 +4,10 @@
 Status: In Progress
 
 Complete:
-- 
+- generates echo effect 
 
 Incomplete:
-- 
+- confirmation of buffer delay 
 
 ## Problem 2
 Status: In Progress
