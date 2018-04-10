@@ -77,10 +77,6 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 	
 	/* add your code starting here */
-	Int32 SW = ReadSwitches();
-
-	if(SW % 2 == 1) // ignore SW5 (= 2^0)
-		SW -= 1;
 
 	// check switches: SW6 = 2^1, SW7 = 2^2; 0 = up, 1 = down
 	// LEDs: D4 = 2^0, D5 = 2^1; 0 = off, 1 = on

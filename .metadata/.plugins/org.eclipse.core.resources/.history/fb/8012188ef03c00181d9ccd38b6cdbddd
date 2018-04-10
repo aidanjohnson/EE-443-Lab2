@@ -27,12 +27,12 @@ volatile union {
 /* add any global variables here */
 float xLeft, xRight, yLeft, yRight;
 Uint32 oldest = 0; // index for buffer value
-#define DELAY 0.5 // seconds
-float BUFFER_LENGTH = DELAY * GetSampleFreq(); // buffer length in samples = sampling rate in Hz * delay in s
+#define DELAY 0.5
+float BUFFER_LENGTH = DELAY * GetSampleFreq(); // buffer length in samples = sampling rate * delay
 #pragma DATA_SECTION (buffer, "CE0"); // put "buffer" in SDRAM
 volatile float buffer[DELAY][BUFFER_LENGTH]; // space for left + right
 int DelaySamples = (int) BUFFER_LENGTH;  // can be manipulated by GEL file
-volatile float gain = 1; /* set gain value for echoed sample */
+volatile float gain = 0.75; /* set gain value for echoed sample */
 
 void ZeroBuffer()
 ///////////////////////////////////////////////////////////////////////
@@ -77,10 +77,6 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 	
 	/* add your code starting here */
-	Int32 SW = ReadSwitches();
-
-	if(SW % 2 == 1) // ignore SW5 (= 2^0)
-		SW -= 1;
 
 	// check switches: SW6 = 2^1, SW7 = 2^2; 0 = up, 1 = down
 	// LEDs: D4 = 2^0, D5 = 2^1; 0 = off, 1 = on
