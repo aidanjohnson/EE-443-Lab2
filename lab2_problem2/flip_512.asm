@@ -1,10 +1,10 @@
-			.def _fircircfunc
+			.def _flip_512
             .align 256          ;align delay buffer 256-byte boundary
 delays      .space 256          ;init 256-byte buffer with 0's
 last_addr   .int   last_addr-2  ;point to bottom of delays buffer
             .text		        ;code section
 
-_fircircfunc:			 	    ;FIR function using circ addr
+_flip_512:			 	    	;flip
             MV    A6,A1    	    ;setup loop count
  	        MPY   A6,2,A6       ;since dly buffer data as byte
 	        ZERO  A8   	        ;init A8 for accumulation

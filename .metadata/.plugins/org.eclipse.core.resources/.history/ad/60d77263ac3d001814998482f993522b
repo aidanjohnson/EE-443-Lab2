@@ -1,0 +1,27 @@
+			.def _fircircfunc
+            .align 256          ;align delay buffer 256-byte boundary
+delays      .space 256          ;init 256-byte buffer with 0's
+last_addr   .int   last_addr-2  ;point to bottom of delays buffer
+            .text		        ;code section
+
+_fircircfunc:			 	    ;FIR function using circ addr
+            MV    A6,A1    	    ;setup loop count
+            MVKL  0x00070040,A3 ;select A7 as pointer and (511=11111111)
+            MVKH  0x00070040,A3 ;BK0 for 256=2^(7+1) bytes (128 shorts)
+
+            MVC   A3,AMR        ;set address mode register AMR
+	        MVKL  last_addr,A9  ;A9=last circ addr(lower 16 bits)
+	        MVKH  last_addr,A9  ;last circ addr (higher 16 bits)
+            LDW   *A9,A7        ;A7=last circ addr
+            NOP   4             ; make sure no parallel execution
+            STH   A4,*A7++	    ;newest sample-->last address
+
+loop:
+            LDH   *A7++,A2      ;A2=x[n-(N-1)+i] i=0,1,...,N-1
+            SUB   A1,1,A1	    ;decrement count
+    [A1]    B     loop    	    ;branch to loop if count != 0
+            NOP   2
+            STW   A7,*A9        ;store last circ addr to last_addr
+            B     B3            ;return addr to calling routine
+            MV    A8,A4	        ;result returned in A4
+            NOP   4
