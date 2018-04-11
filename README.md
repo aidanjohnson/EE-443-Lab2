@@ -17,6 +17,7 @@ Complete:
 
 Incomplete:
 - C-callable assembly code for flipping
+- ** A better explanation on circular buffering: http://www.ti.com/lit/an/spra645a/spra645a.pdf **
 
 ## Problem 3
 Status: In Progress
