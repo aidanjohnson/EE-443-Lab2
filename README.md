@@ -39,7 +39,7 @@ Complete:
 - N/A
 
 Incomplete:
-- ?Pitch Shifte?
+- ?Pitch Shifter?
 
 
 ## Textbook
