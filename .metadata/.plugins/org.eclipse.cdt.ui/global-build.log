@@ -349,3 +349,30 @@ gmake: Target `all' not remade because of errors.
 ' '
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem1 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../StartUp.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.d"  "../StartUp.c"
+Finished building: ../StartUp.c
+ 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../vectors.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.d"  "../vectors.asm"
+Finished building: ../vectors.asm
+ 
+Building target: lab2_problem1.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem1.out
+ 
+
+**** Build Finished ****

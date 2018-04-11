@@ -360,3 +360,77 @@ java.nio.channels.ClosedByInterruptException
 
 !ENTRY org.eclipse.cdt.core 1 0 2018-04-10 13:06:27.948
 !MESSAGE Indexed 'lab2_problem2' (4 sources, 8 headers) in 0.44 sec: 734 declarations; 733 references; 0 unresolved inclusions; 61 syntax errors; 16 unresolved names (1.1%)
+!SESSION 2018-04-10 18:16:22.276 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_GB
+Framework arguments:  -product com.ti.ccstudio.branding.product -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.ti.ccstudio.branding.product -data /home/aidan/EE-443-Lab2 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-04-10 18:17:02.689
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.ti.common.core 4 0 2018-04-10 18:17:02.764
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-04-10 18:17:02.765
+!MESSAGE debugServerDir=/opt/ti/ccsv6/ccs_base/DebugServer
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-04-10 18:17:18.400
+!MESSAGE No repository found at file:/home/aidan/gc/guicomposer/ccs_base/.
+
+!ENTRY com.ti.ccstudio.errorreporting 4 0 2018-04-10 18:17:20.800
+!MESSAGE An internal error was logged by 'com.ti.ccstudio.errorreporting'.
+!STACK 0
+java.lang.NullPointerException
+	at com.ti.ccstudio.errorreporting.HtmlPostUtility.getUID(HtmlPostUtility.java:213)
+	at com.ti.ccstudio.errorreporting.HtmlPostUtility.heartBeat(HtmlPostUtility.java:267)
+	at com.ti.ccstudio.errorreporting.ErrorReportJob.run(ErrorReportJob.java:66)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-04-10 18:17:21.874
+!MESSAGE No repository found at file:/home/aidan/gc/guicomposer/eclipse/.
+
+!ENTRY org.eclipse.ui 2 0 2018-04-10 18:17:25.277
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.graph.visualization' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-10 18:17:25.283
+!MESSAGE Indexed 'lab2_problem4' (4 sources, 8 headers) in 5.28 sec: 462 declarations; 530 references; 0 unresolved inclusions; 12 syntax errors; 193 unresolved names (16%)
+
+!ENTRY org.eclipse.ui 2 0 2018-04-10 18:17:25.391
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.rovsupport' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2018-04-10 18:17:25.420
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.dvt.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2018-04-10 18:17:25.604
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.uia.sessionmgr.view' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2018-04-10 18:17:25.620
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.ti.util.ui' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-10 18:17:26.097
+!MESSAGE Indexed 'lab2_problem3' (4 sources, 8 headers) in 0.797 sec: 462 declarations; 530 references; 0 unresolved inclusions; 12 syntax errors; 193 unresolved names (16%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-10 18:17:27.521
+!MESSAGE Indexed 'lab2_problem2' (4 sources, 8 headers) in 1.37 sec: 462 declarations; 530 references; 0 unresolved inclusions; 12 syntax errors; 193 unresolved names (16%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-10 18:17:28.085
+!MESSAGE Indexed 'lab2_problem1' (4 sources, 9 headers) in 0.513 sec: 471 declarations; 581 references; 0 unresolved inclusions; 12 syntax errors; 195 unresolved names (16%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-10 18:32:02.141
+!MESSAGE Indexed 'lab2_problem1' (4 sources, 11 headers) in 0.347 sec: 755 declarations; 788 references; 0 unresolved inclusions; 61 syntax errors; 16 unresolved names (1%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-10 18:37:18.014
+!MESSAGE Indexed 'lab2_problem2' (4 sources, 8 headers) in 0.285 sec: 734 declarations; 733 references; 0 unresolved inclusions; 61 syntax errors; 16 unresolved names (1.1%)

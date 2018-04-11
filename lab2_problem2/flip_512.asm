@@ -10,7 +10,7 @@ _fircircfunc:			 	    ;FIR function using circ addr
 	        ZERO  A8   	        ;init A8 for accumulation
 	        ADD   A6,B4,B4	    ;since coeff buffer data as bytes
 	        SUB   B4,1,B4       ;B4=bottom coeff array h[N-1]
-            MVKL  0x00070040,B6 ;select A7 as pointer and (40=01000000   		see Appendix   	B, Figure B.1)
+            MVKL  0x00070040,B6 ;select A7 as pointer and (40=01000000 see Appendix B, Figure B.1)
             MVKH  0x00070040,B6 ;BK0 for 256=2^(7+1) bytes (128 shorts)
 
             MVC   B6,AMR        ;set address mode register AMR
