@@ -48,9 +48,9 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 
   	if (itr < NUM_SAMPLES) {
-  		input[itr++] = (short) CodecDataIn.Channel[LEFT];
+  		input[itr++] = CodecDataIn.Channel[LEFT];
 	} else if (itr == NUM_SAMPLES) {
-		output = flip_512(input, NUM_SAMPLES);
+		output = flip_512(input);
 		printf("x[n] is %d", input);
 		printf("\n");
 		printf("^x[n] is %d", output);

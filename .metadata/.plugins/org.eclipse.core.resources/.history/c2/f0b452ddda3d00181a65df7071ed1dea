@@ -19,8 +19,8 @@
 #define RIGHT 1
 
 #define NUM_SAMPLES 512
-volatile float input[NUM_SAMPLES];
-float output[NUM_SAMPLES];
+volatile short input[NUM_SAMPLES];
+short output[NUM_SAMPLES];
 int itr = 0;
 
 volatile union {
@@ -50,7 +50,7 @@ interrupt void Codec_ISR()
   	if (itr < NUM_SAMPLES) {
   		input[itr++] = (short) CodecDataIn.Channel[LEFT];
 	} else if (itr == NUM_SAMPLES) {
-		output = flip_512(input, NUM_SAMPLES);
+		flip_512(input, output);
 		printf("x[n] is %d", input);
 		printf("\n");
 		printf("^x[n] is %d", output);
