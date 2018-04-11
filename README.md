@@ -18,6 +18,10 @@ Complete:
 Incomplete:
 - C-callable assembly code for flipping
 - ** A better explanation on circular buffering: http://www.ti.com/lit/an/spra645a/spra645a.pdf **
+- My idea:
+1) 512-value float array (4 bytes per entry) passed to .asm function
+2) pointer on input array (starting at end and descending), moving address to each value to pointer on output array (starting at beginning and ascending)
+3) return values as array, with an order corresponding to the output array
 
 ## Problem 3
 Status: In Progress
