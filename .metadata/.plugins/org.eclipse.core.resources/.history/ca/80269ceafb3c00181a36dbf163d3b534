@@ -1,7 +1,0 @@
-.align 256 					; align delay buffer 256-byte boundary
-delays .space 256 			; init 256-byte buffer with 0's
-last_addr .int last_addr-1 	; point to bottom of delays buffer
-.text 						; code section
-
-_flip: ; flip 512 samples
-

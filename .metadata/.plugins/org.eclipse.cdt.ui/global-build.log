@@ -1,358 +1,23 @@
 
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-'Finished building: ../ISRs.c'
-' '
-'Building file: ../LCDK_Support_DSP.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="LCDK_Support_DSP.pp"  "../LCDK_Support_DSP.c"
-'Finished building: ../LCDK_Support_DSP.c'
-' '
-'Building file: ../StartUp.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
-'Finished building: ../StartUp.c'
-' '
-'Building file: ../main.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-'Finished building: ../main.c'
-' '
-'Building file: ../vectors.asm'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
-'Finished building: ../vectors.asm'
-' '
-'Building target: lab2_problem1.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
-<Linking>
-'Finished building target: lab2_problem1.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-gmake: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Clean-only build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k clean 
-DEL /F  "lab2_problem1.out"  "lab2_problem1.hex" 
-DEL /F "ISRs.pp" "LCDK_Support_DSP.pp" "StartUp.pp" "main.pp" 
-DEL /F "ISRs.obj" "LCDK_Support_DSP.obj" "StartUp.obj" "main.obj" "vectors.obj" 
-DEL /F "vectors.pp" 
-Could Not Find U:\4th Year (2017-2018)\Spring Quarter\EE 443\workspace\EE-442-Lab2\lab2_problem1\Debug\vectors.pp
-'Finished clean'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 12: fatal error #5: could not open source file "Echo.h"
-1 fatal error detected in the compilation of "../ISRs.c".
-Compilation terminated.
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-'Building file: ../LCDK_Support_DSP.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="LCDK_Support_DSP.pp"  "../LCDK_Support_DSP.c"
-'Finished building: ../LCDK_Support_DSP.c'
-' '
-'Building file: ../StartUp.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
-'Finished building: ../StartUp.c'
-' '
-'Building file: ../main.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-'Finished building: ../main.c'
-' '
-'Building file: ../vectors.asm'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
-'Finished building: ../vectors.asm'
-' '
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 31: error #60: function call is not allowed in a constant expression
-"../ISRs.c", line 33: error #31: expression must have integral type
-"../ISRs.c", line 33: error #28: expression must have a constant value
-"../ISRs.c", line 34: error #28: expression must have a constant value
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-4 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 33: error #31: expression must have integral type
-"../ISRs.c", line 33: error #28: expression must have a constant value
-"../ISRs.c", line 34: error #28: expression must have a constant value
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-3 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 32: error #20: identifier "DELAY" is undefined
-"../ISRs.c", line 32: error #28: expression must have a constant value
-"../ISRs.c", line 33: error #28: expression must have a constant value
-"../ISRs.c", line 71: warning #552-D: variable "newest" was set but never used
-3 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 31: error #60: function call is not allowed in a constant expression
-"../ISRs.c", line 32: error #28: expression must have a constant value
-"../ISRs.c", line 34: error #28: expression must have a constant value
-"../ISRs.c", line 35: error #28: expression must have a constant value
-"../ISRs.c", line 73: warning #552-D: variable "newest" was set but never used
-4 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 33: error #28: expression must have a constant value
-"../ISRs.c", line 34: error #28: expression must have a constant value
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-2 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 33: error #17: expected a "]"
-"../ISRs.c", line 33: error #171: expected a declaration
-"../ISRs.c", line 34: warning #383-D: extra ";" ignored
-"../ISRs.c", line 52: error #29: expected an expression
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-3 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-'Finished building: ../ISRs.c'
-' '
-'Building target: lab2_problem1.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
-<Linking>
-'Finished building target: lab2_problem1.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-'Finished building: ../ISRs.c'
-' '
-'Building target: lab2_problem1.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
-<Linking>
-'Finished building target: lab2_problem1.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 33: error #28: expression must have a constant value
-"../ISRs.c", line 33: error #60: function call is not allowed in a constant expression
-"../ISRs.c", line 34: error #60: function call is not allowed in a constant expression
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-3 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 30: error #60: function call is not allowed in a constant expression
-"../ISRs.c", line 34: error #28: expression must have a constant value
-"../ISRs.c", line 35: error #28: expression must have a constant value
-"../ISRs.c", line 73: warning #552-D: variable "newest" was set but never used
-3 errors detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 33: error #20: identifier "freq" is undefined
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-1 error detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-'Building file: ../main.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-'Finished building: ../main.c'
-' '
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 72: warning #552-D: variable "newest" was set but never used
-'Finished building: ../ISRs.c'
-' '
-'Building file: ../main.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-'Finished building: ../main.c'
-' '
-'Building target: lab2_problem1.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
-<Linking>
-'Finished building target: lab2_problem1.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-"../ISRs.c", line 112: error #20: identifier "newest" is undefined
-1 error detected in the compilation of "../ISRs.c".
-
->> Compilation failure
-gmake: *** [ISRs.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
-
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../ISRs.c'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
-'Finished building: ../ISRs.c'
-' '
-'Building target: lab2_problem1.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
-<Linking>
-'Finished building target: lab2_problem1.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab2_problem1 ****
+**** Build of configuration Debug for project lab2_problem2 ****
 
 /opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 53: warning #225-D: function declared implicitly
+"../ISRs.c", line 53: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 54: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+Building file: ../LCDK_Support_DSP.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="LCDK_Support_DSP.d"  "../LCDK_Support_DSP.c"
+Finished building: ../LCDK_Support_DSP.c
+ 
 Building file: ../StartUp.c
 Invoking: C6000 Compiler
 "/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.d"  "../StartUp.c"
@@ -368,11 +33,337 @@ Invoking: C6000 Compiler
 "/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.d"  "../vectors.asm"
 Finished building: ../vectors.asm
  
-Building target: lab2_problem1.out
-Invoking: C6000 Linker
-"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem1.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem1_linkInfo.xml" --rom_model -o "lab2_problem1.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
-<Linking>
-Finished building target: lab2_problem1.out
+Building file: ../flip_512.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="flip_512.d"  "../flip_512.asm"
+No Assembly Errors, 1 Assembly Warning
+"../flip_512.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV	  B4,A1			;setup loop count
+
+Finished building: ../flip_512.asm
  
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 53: warning #225-D: function declared implicitly
+"../ISRs.c", line 53: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 54: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+Building file: ../flip_512.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="flip_512.d"  "../flip_512.asm"
+No Assembly Errors, 1 Assembly Warning
+"../flip_512.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    B4,A1	        ;setup loop count
+
+Finished building: ../flip_512.asm
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 53: warning #225-D: function declared implicitly
+"../ISRs.c", line 53: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 54: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+Building file: ../flip_512.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="flip_512.d"  "../flip_512.asm"
+No Assembly Errors, 1 Assembly Warning
+"../flip_512.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+Finished building: ../flip_512.asm
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 53: warning #225-D: function declared implicitly
+"../ISRs.c", line 53: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 54: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+Building file: ../flip_512.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="flip_512.d"  "../flip_512.asm"
+No Assembly Errors, 1 Assembly Warning
+"../flip_512.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+Finished building: ../flip_512.asm
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 53: warning #225-D: function declared implicitly
+"../ISRs.c", line 53: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 54: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+Building file: ../flip_512.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="flip_512.d"  "../flip_512.asm"
+No Assembly Errors, 1 Assembly Warning
+"../flip_512.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	  			MV    B4,A1	        ;setup loop count
+
+Finished building: ../flip_512.asm
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 53: warning #225-D: function declared implicitly
+"../ISRs.c", line 53: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 54: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+Building file: ../flip_512.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="flip_512.d"  "../flip_512.asm"
+No Assembly Errors, 1 Assembly Warning
+"../flip_512.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+Finished building: ../flip_512.asm
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 55: error #169: argument of type "volatile float *" is incompatible with parameter of type "float"
+"../ISRs.c", line 55: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 56: warning #225-D: function declared implicitly
+2 errors detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 55: error #169: argument of type "float *" is incompatible with parameter of type "float"
+"../ISRs.c", line 55: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 56: warning #225-D: function declared implicitly
+2 errors detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 55: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 56: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 55: error #169: argument of type "volatile float *" is incompatible with parameter of type "float *"
+"../ISRs.c", line 55: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 56: warning #225-D: function declared implicitly
+2 errors detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 26: warning #869-D: type qualifier on return type is meaningless
+"../ISRs.c", line 55: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 56: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ISRs.obj' failed
+"../ISRs.c", line 55: error #138: expression must be a modifiable lvalue
+"../ISRs.c", line 56: warning #225-D: function declared implicitly
+1 error detected in the compilation of "../ISRs.c".
+gmake: *** [ISRs.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+"../ISRs.c", line 56: warning #225-D: function declared implicitly
+Finished building: ../ISRs.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./flip_512.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../flip_512.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="flip_512.d"  "../flip_512.asm"
+No Assembly Errors, 1 Assembly Warning
+"../flip_512.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+Finished building: ../flip_512.asm
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./flip_512.obj" "./main.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
 
 **** Build Finished ****

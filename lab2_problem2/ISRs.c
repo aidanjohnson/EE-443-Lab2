@@ -20,8 +20,10 @@
 
 #define NUM_SAMPLES 512
 volatile float input[NUM_SAMPLES];
-float output[NUM_SAMPLES];
+volatile float output[NUM_SAMPLES];
 int itr = 0;
+
+extern void flip_512(volatile float *in, int n, volatile float *out);
 
 volatile union {
 	Uint32 UINT;
@@ -50,10 +52,11 @@ interrupt void Codec_ISR()
   	if (itr < NUM_SAMPLES) {
   		input[itr++] = (short) CodecDataIn.Channel[LEFT];
 	} else if (itr == NUM_SAMPLES) {
-		output = flip_512(input, NUM_SAMPLES);
 		printf("x[n] is %d", input);
+		flip(input, NUM_SAMPLES, output);
 		printf("\n");
 		printf("^x[n] is %d", output);
+		itr++;
   	}
 
 	WriteCodecData(0);		// send output data to port
