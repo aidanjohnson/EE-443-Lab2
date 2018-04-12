@@ -1817,3 +1817,281 @@ Finished building target: lab2_problem2.out
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../ISRs.c'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.pp"  "../ISRs.c"
+"../ISRs.c", line 57: warning #225-D: function declared implicitly
+'Finished building: ../ISRs.c'
+' '
+'Building file: ../LCDK_Support_DSP.c'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="LCDK_Support_DSP.pp"  "../LCDK_Support_DSP.c"
+'Finished building: ../LCDK_Support_DSP.c'
+' '
+'Building file: ../StartUp.c'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.pp"  "../StartUp.c"
+'Finished building: ../StartUp.c'
+' '
+'Building file: ../main.c'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../vectors.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.pp"  "../vectors.asm"
+'Finished building: ../vectors.asm'
+' '
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+"../stack.asm", ERROR!   at line 20: [E0003] Unexpected trailing operand(s)
+				LDB   --B15[4],A4
+
+"../stack.asm", ERROR!   at line 20: [E0004] Operand #1, B15, not legal: indirect expected
+				LDB   --B15[4],A4
+
+"../stack.asm", ERROR!   at line 20: [E0005] Operand #2 missing: register expected
+				LDB   --B15[4],A4
+
+3 Assembly Errors, 1 Assembly Warning
+
+Errors in Source - Assembler Aborted
+
+>> Compilation failure
+gmake: *** [stack.obj] Error 1
+gmake: Target `all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+"../stack.asm", ERROR!   at line 20: [E0200] Binary operator can't be applied
+				LDB   *--B15[4],A4+
+
+"../stack.asm", ERROR!   at line 20: [E0200] Bad term in expression
+				LDB   *--B15[4],A4+
+
+"../stack.asm", ERROR!   at line 20: [E0004] Operand #2 not legal: register expected
+3 Assembly Errors, 1 Assembly Warning
+				LDB   *--B15[4],A4+
+
+
+Errors in Source - Assembler Aborted
+
+>> Compilation failure
+gmake: *** [stack.obj] Error 1
+gmake: Target `all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 8: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	            MV    A4,B6			;move input array
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 9: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	  			MV    B4,B1	        ;push loop count
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 9: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	  			MV    B4,B1	        ;push loop count
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../stack.asm'
+'Invoking: C6000 Compiler'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
+"../stack.asm", WARNING! at line 9: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
+	  			MV    B4,B1	        ;push loop count
+
+No Assembly Errors, 1 Assembly Warning
+'Finished building: ../stack.asm'
+' '
+'Building target: lab2_problem2.out'
+'Invoking: C6000 Linker'
+"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
+<Linking>
+'Finished building target: lab2_problem2.out'
+' '
+
+**** Build Finished ****

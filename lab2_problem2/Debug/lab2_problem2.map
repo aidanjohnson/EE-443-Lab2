@@ -1,7 +1,7 @@
 ******************************************************************************
-               TMS320C6x Linker Unix v7.4.16                   
+               TMS320C6x Linker PC v7.4.14                     
 ******************************************************************************
->> Linked Thu Apr 12 00:08:58 2018
+>> Linked Thu Apr 12 12:42:31 2018
 
 OUTPUT FILE NAME:   <lab2_problem2.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 11806be0
