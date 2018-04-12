@@ -19,12 +19,14 @@
 #define RIGHT 1
 
 #define NUM_SAMPLES 512
-volatile float input[NUM_SAMPLES];
-volatile float output[NUM_SAMPLES];
+//volatile float input[NUM_SAMPLES];
+//volatile float output[NUM_SAMPLES];
+extern volatile float input[NUM_SAMPLES];
+extern volatile float output[NUM_SAMPLES];
 int bytes = sizeof(float);
 int itr = 0;
 
-extern void stack(volatile float *in, int n, int b, volatile float *out);
+//extern void stack(volatile float *in, int n, int b, volatile float *out);
 
 volatile union {
 	Uint32 UINT;
@@ -51,13 +53,12 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 
   	if (itr < NUM_SAMPLES) {
-  		input[itr++] = CodecDataIn.Channel[LEFT];
-  		output[itr++] = 0;
+  		input[itr] = (float) itr;//CodecDataIn.Channel[LEFT];
+  		output[itr] = 0;
+  		itr++;
 	} else if (itr == NUM_SAMPLES) {
-		printf("x[n] is %d", input);
 		stack(input, NUM_SAMPLES, bytes, output);
-		printf("\n");
-		printf("^x[n] is %d", output);
+		printf("x[n] is %d \n ^x[n] is", input, output);
 		itr++;
   	}
 

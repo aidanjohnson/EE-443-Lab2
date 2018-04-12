@@ -5,10 +5,6 @@
 'Building file: ../stack.asm'
 'Invoking: C6000 Compiler'
 "C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
-"../stack.asm", WARNING! at line 9: [W9999] Placing data in a code section (.text) is discouraged. The data may be interpreted as code. This section will not be compressed.
-	  			MV    B4,B1	        ;push loop count
-
-No Assembly Errors, 1 Assembly Warning
 'Finished building: ../stack.asm'
 ' '
 'Building target: lab2_problem2.out'
