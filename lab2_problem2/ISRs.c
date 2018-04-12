@@ -21,9 +21,10 @@
 #define NUM_SAMPLES 512
 volatile float input[NUM_SAMPLES];
 volatile float output[NUM_SAMPLES];
+int bytes = sizeof(float);
 int itr = 0;
 
-extern void flip_512(volatile float *in, int n, volatile float *out);
+extern void stack(volatile float *in, int n, int b, volatile float *out);
 
 volatile union {
 	Uint32 UINT;
@@ -50,10 +51,11 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 
   	if (itr < NUM_SAMPLES) {
-  		input[itr++] = (short) CodecDataIn.Channel[LEFT];
+  		input[itr++] = CodecDataIn.Channel[LEFT];
+  		output[itr++] = 0;
 	} else if (itr == NUM_SAMPLES) {
 		printf("x[n] is %d", input);
-		flip(input, NUM_SAMPLES, output);
+		stack(input, NUM_SAMPLES, bytes, output);
 		printf("\n");
 		printf("^x[n] is %d", output);
 		itr++;
