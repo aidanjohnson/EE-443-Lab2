@@ -1,0 +1,15 @@
+			.def _xcorr
+            .align 256          ;align delay buffer 256-byte boundary
+            .text		        ;code section
+
+_xcorr:							;A4 = in, x(n); B6 = out, R(k)
+  			MV    B4,B1	        ;B4 = samples, N
+  			MV	  B4,A1			;A6 = autocorrelation coefficients, k
+
+corr:							;finds k coefficients
+
+sum:					        ;sums N-k autocorrelated products
+            LDW   *B15++,A6	;assumes 4 Byte float i/o given by A6
+            SUB   B1,1,B1	    ;decrement count
+    [B1]    B     push    	    ;branch to loop if count != 0
+            NOP   5

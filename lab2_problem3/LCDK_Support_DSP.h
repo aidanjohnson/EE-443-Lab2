@@ -59,6 +59,7 @@ Uint32 CheckForOverrun();
 
 // defined in StartUp.c (in application directory)
 void   StartUp();
+void   xcorr(volatile float *in, int n, int k, volatile float *out);
 
 
 #endif

@@ -59,6 +59,6 @@ Uint32 CheckForOverrun();
 
 // defined in StartUp.c (in application directory)
 void   StartUp();
-void stack(volatile float *in, int n, int bytes, volatile float *out);
+void   stack(volatile float *in, int n, int bytes, volatile float *out);
 
 #endif
