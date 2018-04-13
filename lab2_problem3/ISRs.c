@@ -24,6 +24,8 @@
 extern volatile float input[NUM_SAMPLES];
 extern volatile float output[NUM_SAMPLES];
 extern int itr;
+volatile float coeff[NUM_SAMPLES];
+int bytes = sizeof(float);
 
 volatile union {
 	Uint32 UINT;
@@ -54,7 +56,8 @@ interrupt void Codec_ISR()
   		output[itr] = 0;
   		itr++;
 	} else if (itr == NUM_SAMPLES) {
-		xcorr(input, NUM_SAMPLES, K, output);
+		xcorr(input, input, NUM_SAMPLES, K, coeff); //autocorrelated
+		stack(coeff, NUM_SAMPLES, bytes, output);
   	}
 
 	WriteCodecData(0);		// send output data to port
