@@ -1,17 +1,20 @@
 
 **** Build of configuration Debug for project lab2_problem2 ****
 
-"C:\\ti\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../stack.asm'
-'Invoking: C6000 Compiler'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.pp"  "../stack.asm"
-'Finished building: ../stack.asm'
-' '
-'Building target: lab2_problem2.out'
-'Invoking: C6000 Linker'
-"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/lib" -i"C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -l"libc.a" 
-<Linking>
-'Finished building target: lab2_problem2.out'
-' '
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:28: recipe for target 'main.obj' failed
+"../main.c", line 31: warning #225-D: function declared implicitly
+"../main.c", line 31: error #20: identifier "stdout" is undefined
+"../main.c", line 31: error #20: identifier "NULL" is undefined
+"../main.c", line 31: error #20: identifier "_IONBF" is undefined
+"../main.c", line 32: warning #225-D: function declared implicitly
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
 
 **** Build Finished ****

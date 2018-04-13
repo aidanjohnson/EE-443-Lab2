@@ -19,12 +19,11 @@
 #define RIGHT 1
 
 #define NUM_SAMPLES 512
-//volatile float input[NUM_SAMPLES];
-//volatile float output[NUM_SAMPLES];
+
 extern volatile float input[NUM_SAMPLES];
 extern volatile float output[NUM_SAMPLES];
 int bytes = sizeof(float);
-int itr = 0;
+extern int itr;
 
 //extern void stack(volatile float *in, int n, int b, volatile float *out);
 
@@ -58,8 +57,8 @@ interrupt void Codec_ISR()
   		itr++;
 	} else if (itr == NUM_SAMPLES) {
 		stack(input, NUM_SAMPLES, bytes, output);
-		printf("x[n] is %d \n ^x[n] is", input, output);
-		itr++;
+		//printf("x[n] is %d \n ^x[n] is", input, output);
+		//itr++;
   	}
 
 	WriteCodecData(0);		// send output data to port

@@ -3076,3 +3076,256 @@ gmake: Target `all' not remade because of errors.
 ' '
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+"../ISRs.c", line 61: warning #225-D: function declared implicitly
+Finished building: ../ISRs.c
+ 
+Building file: ../LCDK_Support_DSP.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="LCDK_Support_DSP.d"  "../LCDK_Support_DSP.c"
+Finished building: ../LCDK_Support_DSP.c
+ 
+Building file: ../StartUp.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="StartUp.d"  "../StartUp.c"
+Finished building: ../StartUp.c
+ 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../stack.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="stack.d"  "../stack.asm"
+Finished building: ../stack.asm
+ 
+Building file: ../vectors.asm
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="vectors.d"  "../vectors.asm"
+Finished building: ../vectors.asm
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+"../ISRs.c", line 61: warning #225-D: function declared implicitly
+"../main.c", line 31: warning #225-D: function declared implicitly
+Finished building: ../ISRs.c
+ 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+Finished building: ../main.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+Finished building: ../ISRs.c
+ 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 31: warning #225-D: function declared implicitly
+Finished building: ../main.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+Finished building: ../ISRs.c
+ 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 31: warning #225-D: function declared implicitly
+Finished building: ../main.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+Finished building: ../ISRs.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 31: warning #225-D: function declared implicitly
+Finished building: ../main.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 30: warning #225-D: function declared implicitly
+Finished building: ../main.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 30: warning #225-D: function declared implicitly
+"../main.c", line 32: warning #225-D: function declared implicitly
+Finished building: ../main.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+"../main.c", line 31: warning #225-D: function declared implicitly
+Finished building: ../main.c
+ 
+Building target: lab2_problem2.out
+Invoking: C6000 Linker
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --display_error_number --diag_warning=225 --diag_wrap=off -z -m"lab2_problem2.map" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/lib" -i"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --reread_libs --display_error_number --diag_wrap=off --warn_sections --xml_link_info="lab2_problem2_linkInfo.xml" --rom_model -o "lab2_problem2.out" "./ISRs.obj" "./LCDK_Support_DSP.obj" "./StartUp.obj" "./main.obj" "./stack.obj" "./vectors.obj" "../link6748.cmd"  -llibc.a 
+<Linking>
+Finished building target: lab2_problem2.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../ISRs.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="ISRs.d"  "../ISRs.c"
+Finished building: ../ISRs.c
+ 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:28: recipe for target 'main.obj' failed
+"../main.c", line 31: warning #225-D: function declared implicitly
+"../main.c", line 32: warning #225-D: function declared implicitly
+"../main.c", line 32: error #20: identifier "stdout" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab2_problem2 ****
+
+/opt/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: C6000 Compiler
+"/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/bin/cl6x" -mv6740 --abi=coffabi -g --include_path="/opt/ti/ccsv6/tools/compiler/c6000_7.4.16/include" --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:28: recipe for target 'main.obj' failed
+"../main.c", line 31: warning #225-D: function declared implicitly
+"../main.c", line 31: error #20: identifier "stdout" is undefined
+"../main.c", line 31: error #20: identifier "NULL" is undefined
+"../main.c", line 31: error #20: identifier "_IONBF" is undefined
+"../main.c", line 32: warning #225-D: function declared implicitly
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
