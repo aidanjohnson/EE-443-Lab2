@@ -11,10 +11,10 @@
 #include "DSP_Config.h"
 #include <time.h> // time.h header
 
-#define NUM_SAMPLES 1024
+#define NUM_SAMPLES 10
 #define K 20
 volatile float input[NUM_SAMPLES];
-volatile float output[NUM_SAMPLES];
+volatile float output[K];
 int itr = 0;
 
 int main()
