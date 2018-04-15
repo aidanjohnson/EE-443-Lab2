@@ -47,13 +47,13 @@ void printArrays()
 ///////////////////////////////////////////////////////////////////////
 {
 	int i;
-	printf("\nx[n] = [");
+	printf("\nx[n] = [ ");
 	for (i = 0; i < NUM_SAMPLES; i++) {
 		printf("%.2f ", input[i]);
 	}
 	printf("]\n");
 
-	printf("x^[n] = [");
+	printf("x^[n] = [ ");
 	for (i = 0; i < NUM_SAMPLES; i++) {
 		printf("%.2f ", output[i]);
 	}

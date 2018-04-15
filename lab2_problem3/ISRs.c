@@ -69,14 +69,14 @@ void printArrays()
 ///////////////////////////////////////////////////////////////////////
 {
 	int i;
-	printf("\nx[n] = [");
+	printf("\nx[n] = [ ");
 	for (i = 0; i < NUM_SAMPLES; i++) {
 		printf("%.2f ", input[i]);
 	}
 	printf("]\n");
 
-	printf("R[k] = [");
-	for (i = 0; i < NUM_SAMPLES; i++) {
+	printf("R[k] = [ ");
+	for (i = 0; i < NUM_AUTOCORR; i++) {
 		printf("%.2f ", output[i]);
 	}
 	printf("]\n");
