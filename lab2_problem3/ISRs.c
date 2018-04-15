@@ -9,7 +9,9 @@
 ///////////////////////////////////////////////////////////////////////
 
 #include "DSP_Config.h" 
-  
+#include <time.h>
+#include <stdio.h>
+
 // Data is received as 2 16-bit words (left/right) packed into one
 // 32-bit word.  The union allows the data to be accessed as a single 
 // entity when transferring to and from the serial port, but still be 
@@ -18,19 +20,40 @@
 #define LEFT  0
 #define RIGHT 1
 
-#define NUM_SAMPLES 10
-#define K 20 // number of autocorrelations
+#define NUM_SAMPLES 32		// Change to 1024
+#define NUM_AUTOCORR 20
 
-extern volatile float input[NUM_SAMPLES];
-extern volatile float output[K];
-extern int itr;
-volatile float coeff[K];
+volatile float input[NUM_SAMPLES];
+volatile float output[NUM_AUTOCORR];
+volatile float coeff[NUM_AUTOCORR];
 int bytes = sizeof(float);
+int itr = 0;
 
 volatile union {
 	Uint32 UINT;
 	Int16 Channel[2];
 } CodecDataIn, CodecDataOut;
+
+void autocorrelation()
+///////////////////////////////////////////////////////////////////////
+// Purpose:   Computes the autocorrelation
+//
+// Input:     None
+//
+// Returns:   Nothing
+//
+// Calls:     None
+//
+// Notes:     None
+///////////////////////////////////////////////////////////////////////
+{
+	int k, n;
+	for (k = 0; k < NUM_AUTOCORR; k++) {
+		for (n = 0; n < NUM_SAMPLES - k; n++) {
+			output[k] = input[n]*input[n + k];
+		}
+	}
+}
 
 interrupt void Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
@@ -51,14 +74,23 @@ interrupt void Codec_ISR()
 
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 
+  	time_t start, stop;
+
   	if (itr < NUM_SAMPLES) {
   		input[itr] = (float) itr;//CodecDataIn.Channel[LEFT];
   		output[itr] = 0;
   		itr++;
-	} else if (itr == NUM_SAMPLES) {
-		xcorr(input, NUM_SAMPLES, K, coeff); //autocorrelated
-		stack(coeff, NUM_SAMPLES, bytes, output);
+	} else {
+		start = time(0);
+		autocorrelation();
+//		xcorr(input, NUM_SAMPLES, NUM_AUTOCORR, coeff); //autocorrelated
+//		stack(coeff, NUM_SAMPLES, bytes, output);
+		stop = time(0);
+
+		time_t dur = stop - start;
+		printf("Processing time: %d \n", dur);
   	}
+
 
 	WriteCodecData(0);		// send output data to port
 }
