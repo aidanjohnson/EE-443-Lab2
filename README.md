@@ -23,14 +23,13 @@ Incomplete:
 Status: In Progress
 
 Complete:
-- Assembly code that computes using the algorithm: For each correlation coefficient k, sum the product of the input function x(n) and it shifted by k x(n+k) for n between [0,N-k], where N is the number of samples of x(n).
-
-
-Incomplete:
-- Functioning autocorrelation assembly code
-- Multiplication seems to be incorrect when compared to [Scilab](https://www.scilab.org/) correlation:
+- Functioning autocorrelation assembly code that computes using the algorithm: For each correlation coefficient k, sum the product of the input function x(n) and it shifted by k x(n+k) for n between [0,N-k], where N is the number of samples of x(n).
+- Multiplication seems to be correct when compared to [Scilab](https://www.scilab.org/) correlation:
 --> x = [0:9]; y = xcorr(x, x, 5); y = y(1:5)
 - Seems to work with MPYSP and ADDSP since working with floats
+
+Incomplete:
+- N/A
 
 ## Problem 4
 Status: In Progress
