@@ -29,7 +29,8 @@ Complete:
 Incomplete:
 - Functioning autocorrelation assembly code
 - Multiplication seems to be incorrect when compared to [Scilab](https://www.scilab.org/) correlation:
---> x = [0:9]; y = corr(x, x, 5);
+--> x = [0:9]; y = xcorr(x, x, 5); y = y(1:5)
+- Seems to work with MPYSP and ADDSP since working with floats
 
 ## Problem 4
 Status: In Progress
