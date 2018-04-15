@@ -8,12 +8,8 @@
 //
 ///////////////////////////////////////////////////////////////////////
 
-#include "DSP_Config.h"   
+#include "DSP_Config.h"
 
-#define NUM_SAMPLES 512
-volatile float input[NUM_SAMPLES];
-volatile float output[NUM_SAMPLES];
-int itr = 0;
 
 int main()
 {    
@@ -27,9 +23,7 @@ int main()
 	
 	// main stalls here, interrupts drive operation 
   	while(1) { 
-		if (itr == NUM_SAMPLES) {
-			printf("x[n] is %d \n ^x[n] is", input, output);
-		}
+  		;
   	}   
 }
 
