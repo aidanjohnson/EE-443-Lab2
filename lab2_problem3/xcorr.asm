@@ -23,12 +23,17 @@ shift:
 
 sum:						;correlation summation
 			LDW *A4++,A2		;multiplier
+			NOP 8
 			LDW *A3++,B2		;multiplicand
 			NOP 8
-			MPY A2,B2,A1	;multiplies in1 and in2 at n and n+k sample index
-			NOP 1
+			MPYH A2,B2,A1	;multiplies in1 and in2 at n and n+k sample index
+			NOP 8
+			NOP 8
+			NOP 8
 			ADD B1,A1,B1	;sums product
+			NOP 8
 			SUB A0,1,A0		;decrements samples counter
+			NOP 8
 	[A0]    B sum
 			NOP 5
 
