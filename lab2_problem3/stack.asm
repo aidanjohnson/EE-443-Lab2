@@ -1,4 +1,6 @@
 			.def _stack
+            .align 256          ;align delay buffer 256-byte boundary
+            .text		        ;code section
 
 _stack:
   			MV    B4,B1	        ;push loop count

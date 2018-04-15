@@ -20,8 +20,8 @@
 #define LEFT  0
 #define RIGHT 1
 
-#define NUM_SAMPLES 32		// Change to 1024
-#define NUM_AUTOCORR 20
+#define NUM_SAMPLES 10		// Change to 1024
+#define NUM_AUTOCORR 5
 
 volatile float input[NUM_SAMPLES];
 volatile float output[NUM_AUTOCORR];
@@ -55,6 +55,33 @@ void autocorrelation()
 	}
 }
 
+void printArrays()
+///////////////////////////////////////////////////////////////////////
+// Purpose:   Codec interface interrupt service routine
+//
+// Input:     None
+//
+// Returns:   Nothing
+//
+// Calls:     CheckForOverrun, ReadCodecData, WriteCodecData
+//
+// Notes:     None
+///////////////////////////////////////////////////////////////////////
+{
+	int i;
+	printf("\nx[n] = [");
+	for (i = 0; i < NUM_SAMPLES; i++) {
+		printf("%.2f ", input[i]);
+	}
+	printf("]\n");
+
+	printf("R[k] = [");
+	for (i = 0; i < NUM_SAMPLES; i++) {
+		printf("%.2f ", output[i]);
+	}
+	printf("]\n");
+}
+
 interrupt void Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
 // Purpose:   Codec interface interrupt service routine  
@@ -77,16 +104,16 @@ interrupt void Codec_ISR()
   	time_t start, stop;
 
   	if (itr < NUM_SAMPLES) {
-  		input[itr] = (float) itr;//CodecDataIn.Channel[LEFT];
+  		input[itr] = itr;//CodecDataIn.Channel[LEFT];
   		output[itr] = 0;
   		itr++;
-	} else {
+	} else if (itr == NUM_SAMPLES) {
 		start = time(0);
-		autocorrelation();
-//		xcorr(input, NUM_SAMPLES, NUM_AUTOCORR, coeff); //autocorrelated
-//		stack(coeff, NUM_SAMPLES, bytes, output);
+//		autocorrelation();
+		xcorr(input, NUM_SAMPLES, NUM_AUTOCORR, output); //autocorrelated
+		printArrays();
+		itr++;
 		stop = time(0);
-
 		time_t dur = stop - start;
 		printf("Processing time: %d \n", dur);
   	}

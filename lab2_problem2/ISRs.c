@@ -80,13 +80,13 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 
   	if (itr < NUM_SAMPLES) {
-  		input[itr] = CodecDataIn.Channel[LEFT];
+  		input[itr] = itr;//CodecDataIn.Channel[LEFT];
   		output[itr] = 0;
   		itr++;
-	} else {
+	} else if (itr == NUM_SAMPLES) {
 		stack(input, NUM_SAMPLES, bytes, output);
 		printArrays();
-		itr = 0;
+		itr++;
   	}
 
 	WriteCodecData(0);		// send output data to port
