@@ -1,4 +1,0 @@
-			.def _xcorr
-
-_xcorr:			 	    ;FIR function using circ addr
-
