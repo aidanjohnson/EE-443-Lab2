@@ -1,36 +1,34 @@
 # EE 443 Lab 2
 
 ## Problem 1
-Status: In Progress
+Status: Complete
 
 Complete:
-- generates echo effect 
+- generates echo effect (using textbook code)
 
 Incomplete:
 - confirmation of buffer delay 
 
 ## Problem 2
-Status: In Progress
+Status: Complete
 
 Complete:
-- N/A
+- Flips input data set
+- Tested with [0:1:511] input -> [511:-1:0] output
 
 Incomplete:
-- C-callable assembly code for flipping
-- ** A better explanation on circular buffering: http://www.ti.com/lit/an/spra645a/spra645a.pdf **
-- My idea:
-1) 512-value float array (4 bytes per entry) passed to .asm function
-2) pointer on input array (starting at end and descending), moving address to each value to pointer on output array (starting at beginning and ascending)
-3) return values as array, with an order corresponding to the output array
+- N/A
 
 ## Problem 3
 Status: In Progress
 
 Complete:
-- N/A
+- Assembly code that correctly computes based on algorithm of: For each correlation coefficient k, sum the product of the input function x(n) and it shifted by k x(n+k) for n between [0,N-k], where N is the number of samples of x(n).
+
 
 Incomplete:
-- C-callable assembly code for autocorrelation
+- Functioning autocorrelation assembly code
+- Multiplication seems to be incorrect when compared to Scilab correlation
 
 ## Problem 4
 Status: In Progress
@@ -39,7 +37,7 @@ Complete:
 - N/A
 
 Incomplete:
-- ?Pitch Shifter?
+- Pitch Shifter (entire problem)
 
 
 ## Textbook
