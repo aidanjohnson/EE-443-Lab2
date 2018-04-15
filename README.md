@@ -23,7 +23,7 @@ Incomplete:
 Status: In Progress
 
 Complete:
-- Assembly code that correctly computes based on algorithm of: For each correlation coefficient k, sum the product of the input function x(n) and it shifted by k x(n+k) for n between [0,N-k], where N is the number of samples of x(n).
+- Assembly code that computes using the algorithm: For each correlation coefficient k, sum the product of the input function x(n) and it shifted by k x(n+k) for n between [0,N-k], where N is the number of samples of x(n).
 
 
 Incomplete:
