@@ -4,17 +4,17 @@
 Status: Complete
 
 Complete:
-- generates echo effect (using textbook code)
+- Generates echo effect (using textbook code Ch. 10.5.1--see CD/code/chapter_10/ccs/Echo/ISRs_[A/B/C].c)
 
 Incomplete:
-- confirmation of buffer delay 
+- Confirmation of buffer delay 
 
 ## Problem 2
 Status: Complete
 
 Complete:
 - Flips input data set
-- Tested with [0:1:511] input -> [511:-1:0] output
+- Tested with [0:1:511] (or range(0,512,1)) input -> [511: -1 :0] (or range(511,-1,-1)) output
 
 Incomplete:
 - N/A
@@ -28,7 +28,8 @@ Complete:
 
 Incomplete:
 - Functioning autocorrelation assembly code
-- Multiplication seems to be incorrect when compared to Scilab correlation
+- Multiplication seems to be incorrect when compared to Scilab correlation:
+--> x = [0:9]; y = corr(x, x, 5);
 
 ## Problem 4
 Status: In Progress
