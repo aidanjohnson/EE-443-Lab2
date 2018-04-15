@@ -42,4 +42,8 @@ Incomplete:
 
 
 ## Textbook
-[2nd ed.](https://doc.lagout.org/programmation/Multi-Language/Real-Time%20Digital%20Signal%20Processing%20from%20MATLAB%20to%20C%20with%20the%20TMS320C6x%20DSPs%20%282nd%20ed.%29%20%5BWelch%2C%20Wright%20%26%20Morrow%202011-12-22%5D.pdf)
+- [2nd ed.](https://doc.lagout.org/programmation/Multi-Language/Real-Time%20Digital%20Signal%20Processing%20from%20MATLAB%20to%20C%20with%20the%20TMS320C6x%20DSPs%20%282nd%20ed.%29%20%5BWelch%2C%20Wright%20%26%20Morrow%202011-12-22%5D.pdf)
+
+## Helpful Links
+- [float <-> hex converter](https://gregstoll.dyndns.org/~gregstoll/floattohex/)
+- [TI C6x Assembly Programming Guide](http://www.ti.com/lit/ug/spru198k/spru198k.pdf)
