@@ -27,7 +27,7 @@ volatile union {
 /* add any global variables here */
 float xLeft, xRight, yLeft, yRight;
 Uint32 oldest = 0; // index for buffer value
-#define DELAY 1 // seconds
+#define DELAY 2
 #define BUFFER_LENGTH DELAY*16000 // buffer length in samples = sampling rate in Hz * delay in s
 #pragma DATA_SECTION (buffer, "CE0"); // put "buffer" in SDRAM
 volatile float buffer[DELAY][BUFFER_LENGTH]; // space for left + right
