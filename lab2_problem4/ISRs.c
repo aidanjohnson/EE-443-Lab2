@@ -22,12 +22,13 @@
 #define B 1								// Index for channel B
 #define MAX_DELAY 700
 
-int idx = 0;							// Index for buffer
-float channDelay[2] = {(float)MAX_DELAY, (float)MAX_DELAY/2};
-float channGain[2] = {0.0, 1.0};
-int channGainInc[2] = {1, 0};			// 1 if channel gain is increasing, 0 if decreasing
-int upwardPitch = 1;					// 1 if upward pitch change, 0 if downward pitch change
-int pitchShiftIsOn = 1;					// 1 if pitch shifter is enabled, 0 is disabled
+int idx = 0;							// Index of the end of the buffer
+float channDelay[2];
+float channGain[2];
+int channGainInc[2];					// 1 if channel gain is increasing, 0 if decreasing
+int upwardPitch;						// 1 if upward pitch change, 0 if downward pitch change
+int pitchShiftIsOn;						// 1 if pitch shifter is enabled, 0 is disabled
+int prevSW = -1;						// Previous switch values
 volatile float buffer[MAX_DELAY + 1];	// 0 to 700
 
 
@@ -121,12 +122,11 @@ float* getDelayedVals()
 	// For channel A, k = 0 and for channel B, k = 1
 	int k;
 	for (k = 0; k < 2; k++) {
-		int ind = idx;
-		int i;
-		// Go back channDelay[k] element to find the delayed value
-		for (i = 0; i < channDelay[k]; i++) {
-			if (--ind <= 0)
-				ind = MAX_DELAY;
+		int ind;	// Index of the delayed value in the buffer
+		if ((int)channDelay > idx) {
+			ind = MAX_DELAY - ((int)channDelay[k] - idx);
+		} else {
+			ind = idx - (int)channDelay;
 		}
 		delayedVal[k] = buffer[ind];
 	}
@@ -155,18 +155,28 @@ interrupt void Codec_ISR()
   	// Toggle the pitch shifter and upward/downward pitch change
   	Int32 SW = ReadSwitches();
 
-  	if (SW == 0) { 			// SW5 up, SW6 up:
-  		upwardPitch = 1;
-  		pitchShiftIsOn = 1;
-  	} else if (SW == 1) { 	// SW5 down, SW6 up:
-  		upwardPitch = 1;
-  		pitchShiftIsOn = 0;
-  	} else if (SW == 2) {	// SW5 up, SW6 down:
-  		upwardPitch = 0;
-  		pitchShiftIsOn = 1;
-  	} else if (SW == 3) { 	// SW5 down, SW6 down:
-  		upwardPitch = 0;
-  		pitchShiftIsOn = 0;
+  	if (SW != prevSW) {
+		if (SW == 0) { 			// SW5 up, SW6 up:
+			upwardPitch = 1;
+			pitchShiftIsOn = 1;
+			channDelay[A] = (float)MAX_DELAY;
+			channDelay[B] = (float)MAX_DELAY/2;
+			channGain[A] = 0.0;
+			channGain[B] = 1.0;
+		} else if (SW == 1) { 	// SW5 down, SW6 up:
+			upwardPitch = 1;
+			pitchShiftIsOn = 0;
+		} else if (SW == 2) {	// SW5 up, SW6 down:
+			upwardPitch = 0;
+			pitchShiftIsOn = 1;
+			channDelay[A] = 0.0;
+			channDelay[B] = (float)MAX_DELAY/2;
+  			channGain[A] = 0.0;
+  			channGain[B] = 1.0;
+		} else if (SW == 3) { 	// SW5 down, SW6 down:
+			upwardPitch = 0;
+			pitchShiftIsOn = 0;
+		}
   	}
 
   	// Update delays and gains
@@ -174,8 +184,8 @@ interrupt void Codec_ISR()
 	updateGains();
 
   	// Update buffer
-	buffer[idx] = CodecDataIn.Channel[LEFT];
-	if (++idx >= MAX_DELAY)
+	buffer[idx++] = CodecDataIn.Channel[LEFT];
+	if (idx > MAX_DELAY)
 		idx = 0;
 
 	// Prepare output
