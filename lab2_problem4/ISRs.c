@@ -10,7 +10,7 @@
 
 #include "DSP_Config.h" 
 #include <stdlib.h>
-  
+
 // Data is received as 2 16-bit words (left/right) packed into one
 // 32-bit word.  The union allows the data to be accessed as a single 
 // entity when transferring to and from the serial port, but still be 
@@ -21,15 +21,16 @@
 #define A 0								// Index for channel A
 #define B 1								// Index for channel B
 #define MAX_DELAY 700
+#define BIAS 650
 
 int idx = 0;							// Index of the end of the buffer
-float channDelay[2];
-float channGain[2];
-int channGainInc[2];					// 1 if channel gain is increasing, 0 if decreasing
-int upwardPitch;						// 1 if upward pitch change, 0 if downward pitch change
-int pitchShiftIsOn;						// 1 if pitch shifter is enabled, 0 is disabled
+float channDelay[2];					// Delay of each channel
+float channGain[2];						// Gain of each channel
+int channGainInc[2] = {1, 0};			// 1 if channel gain is increasing, 0 if decreasing
+int upwardPitch = 1;					// 1 if upward pitch change, 0 if downward pitch change
+int pitchShiftIsOn = 1;					// 1 if pitch shifter is enabled, 0 is disabled
 int prevSW = -1;						// Previous switch values
-volatile float buffer[MAX_DELAY + 1];	// 0 to 700
+float buffer[MAX_DELAY + 1];			// 0 to 700
 
 
 volatile union {
@@ -50,22 +51,26 @@ void updateDelays()
 // Notes:     None
 ///////////////////////////////////////////////////////////////////////
 {
-	int k;
-	// For channel A, k = 0 and for channel B, k = 1
-	for (k = 0; k < 2; k++) {
-		if (upwardPitch) {
-			if (channDelay[A] <= 0) {
-				channDelay[A] = (float)MAX_DELAY;
-			} else {
-				channDelay[A] -= 0.5;
-			}
+	// Channel A
+	if (upwardPitch) {
+		if (channDelay[A] <= 0) {
+			channDelay[A] = (float)MAX_DELAY;
 		} else {
-			if (channDelay[A] >= 1) {
-				channDelay[A] = (float)MAX_DELAY;
-			} else {
-				channDelay[A] += 0.5;
-			}
+			channDelay[A] -= 0.5;
 		}
+	} else {
+		if (channDelay[A] >= (float)MAX_DELAY) {
+			channDelay[A] = 0.0;
+		} else {
+			channDelay[A] += 0.5;
+		}
+	}
+
+	// Channel B
+	if (channDelay[A] >= (float)MAX_DELAY/2) {
+		channDelay[B] = channDelay[A] - (float)MAX_DELAY/2;
+	} else {
+		channDelay[B] = channDelay[A] + (float)MAX_DELAY/2;
 	}
 }
 
@@ -82,34 +87,34 @@ void updateGains()
 // Notes:     None
 ///////////////////////////////////////////////////////////////////////
 {
-	// For channel A, k = 0 and for channel B, k = 1
-	int k;
-	for (k = 0; k < 2; k++) {
-		if (channGainInc[k]) {
-			if (channGain[k] >= 1) {
-				channGainInc[k] = 0;
-				channGain[k] -= (float)1/MAX_DELAY;
-			} else {
-				channGain[k] += (float)1/MAX_DELAY;
-			}
+	// Channel A
+	if (channGainInc[A]) {
+		if (channGain[A] >= 1) {
+			channGainInc[A] = 0;
+			channGain[A] -= (float)1/MAX_DELAY;
 		} else {
-			if (channGain[k] <= 0) {
-				channGainInc[k] = 1;
-				channGain[k] += (float)1/MAX_DELAY;
-			} else {
-				channGain[k] -= (float)1/MAX_DELAY;
-			}
+			channGain[A] += (float)1/MAX_DELAY;
+		}
+	} else {
+		if (channGain[A] <= 0) {
+			channGainInc[A] = 1;
+			channGain[A] += (float)1/MAX_DELAY;
+		} else {
+			channGain[A] -= (float)1/MAX_DELAY;
 		}
 	}
+
+	// Channel B
+	channGain[B] = 1 - channGain[A];
 }
 
-float* getDelayedVals()
+float getDelayedVals(int k)
 ///////////////////////////////////////////////////////////////////////
-// Purpose:   Gets the delayed values for each channel
+// Purpose:   Gets the delayed values of a channel
 //
-// Input:     None
+// Input:     The channel index
 //
-// Returns:   Pointer to two floats
+// Returns:   The delayed value of the channel
 //
 // Calls:     None
 //
@@ -117,19 +122,16 @@ float* getDelayedVals()
 ///////////////////////////////////////////////////////////////////////
 {
 	// Allocate memory for two floats
-	float* delayedVal = (float*)malloc(sizeof(float)*2);
+	float delayedVal;
 
-	// For channel A, k = 0 and for channel B, k = 1
-	int k;
-	for (k = 0; k < 2; k++) {
-		int ind;	// Index of the delayed value in the buffer
-		if ((int)channDelay > idx) {
-			ind = MAX_DELAY - ((int)channDelay[k] - idx);
-		} else {
-			ind = idx - (int)channDelay;
-		}
-		delayedVal[k] = buffer[ind];
+	// For left channel, k = 0 and for right channel, k = 1
+	int ind;	// Index of the delayed value in the buffer
+	if ((int) channDelay[k] > idx) {
+		ind = MAX_DELAY - ((int) channDelay[k] - idx);
+	} else {
+		ind = idx - (int) channDelay[k];
 	}
+	delayedVal = buffer[ind];
 
 	return delayedVal;
 }
@@ -177,6 +179,8 @@ interrupt void Codec_ISR()
 			upwardPitch = 0;
 			pitchShiftIsOn = 0;
 		}
+
+		prevSW = SW;
   	}
 
   	// Update delays and gains
@@ -190,8 +194,9 @@ interrupt void Codec_ISR()
 
 	// Prepare output
 	if (pitchShiftIsOn) {
-		float* delayedChann = getDelayedVals();
-		CodecDataOut.Channel[LEFT] = channGain[A]*delayedChann[A] + channGain[B]*delayedChann[B];
+		float channADelayed = getDelayedVals(A);
+		float channBDelayed = getDelayedVals(B);
+		CodecDataOut.Channel[LEFT] = channGain[A]*channADelayed + channGain[B]*channBDelayed - 2*BIAS;
 	} else {
 		CodecDataOut.Channel[LEFT] = CodecDataIn.Channel[LEFT];
 	}
