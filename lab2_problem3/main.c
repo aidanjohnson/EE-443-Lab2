@@ -31,17 +31,6 @@ int main()
 }
 
 void printArrays(volatile float * input, volatile float * output, time_t dur)
-///////////////////////////////////////////////////////////////////////
-// Purpose:   Codec interface interrupt service routine
-//
-// Input:     None
-//
-// Returns:   Nothing
-//
-// Calls:     CheckForOverrun, ReadCodecData, WriteCodecData
-//
-// Notes:     None
-///////////////////////////////////////////////////////////////////////
 {
 	int i;
 	printf("\nx[n] = [ ");
@@ -56,7 +45,7 @@ void printArrays(volatile float * input, volatile float * output, time_t dur)
 	}
 	printf("]\n");
 
-	printf("Processing time: %d \n", dur);
+	printf("Processing time: %f ms\n", dur);
 
 }
 

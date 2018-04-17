@@ -30,17 +30,6 @@ int main()
 }
 
 void printArrays(volatile float * input, volatile float * output)
-///////////////////////////////////////////////////////////////////////
-// Purpose:   Codec interface interrupt service routine
-//
-// Input:     None
-//
-// Returns:   Nothing
-//
-// Calls:     CheckForOverrun, ReadCodecData, WriteCodecData
-//
-// Notes:     None
-///////////////////////////////////////////////////////////////////////
 {
 	int i = 0; // NOTE: this index writes over input[0]; likely exceeded memory
 	printf("\nx[n] = [ ");

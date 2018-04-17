@@ -46,9 +46,9 @@ void autocorrelation()
 ///////////////////////////////////////////////////////////////////////
 {
 	int k, n;
-	for (k = 0; k < NUM_AUTOCORR; k++) {
+	for (k = 1; k <= NUM_AUTOCORR; k++) {
 		for (n = 0; n < NUM_SAMPLES - k; n++) {
-			output[k] = input[n]*input[n + k];
+			output[NUM_AUTOCORR - k] += input[n]*input[n + k];
 		}
 	}
 }
@@ -75,7 +75,7 @@ interrupt void Codec_ISR()
   	time_t start, stop;
 
   	if (itr < NUM_SAMPLES) {
-  		input[itr] = CodecDataIn.Channel[LEFT]; //itr;
+  		input[itr] = itr; //CodecDataIn.Channel[LEFT]; //itr;
   		output[itr] = 0;
 	} else if (itr == NUM_SAMPLES) {
 		start = time(0);

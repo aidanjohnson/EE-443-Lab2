@@ -1,7 +1,7 @@
 ******************************************************************************
                TMS320C6x Linker PC v7.4.14                     
 ******************************************************************************
->> Linked Tue Apr 17 12:22:17 2018
+>> Linked Tue Apr 17 13:08:30 2018
 
 OUTPUT FILE NAME:   <lab2_problem3.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 11806d00
@@ -12,7 +12,7 @@ MEMORY CONFIGURATION
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
   VECTORS               11800000   00000200  00000200  00000000  RWIX
-  DSPRAM                11800200   0003fe00  0000824b  00037bb5  RWIX
+  DSPRAM                11800200   0003fe00  00008237  00037bc9  RWIX
   SHAREDRAM             80000000   00020000  00000000  00020000  RWIX
   SDRAM                 c0000000   08000000  00000000  08000000  RWIX
 
@@ -132,7 +132,7 @@ vectors    0    11800000    00000200
                   11807c28    00000008     rts6740.lib : memory.obj (.sysmem)
                   11807c30    000003f8     --HOLE--
 
-.cinit     0    11808028    00000184     
+.cinit     0    11808028    00000174     
                   11808028    0000005c     rts6740.lib : defs.obj (.cinit)
                   11808084    00000004     --HOLE-- [fill = 0]
                   11808088    0000005c                 : lowlev.obj (.cinit)
@@ -141,40 +141,40 @@ vectors    0    11800000    00000200
                   11808114    00000004     --HOLE-- [fill = 0]
                   11808118    0000002c                 : memory.obj (.cinit)
                   11808144    00000004     --HOLE-- [fill = 0]
-                  11808148    0000001c     ISRs.obj (.cinit)
+                  11808148    0000001c                 : _lock.obj (.cinit)
                   11808164    00000004     --HOLE-- [fill = 0]
-                  11808168    0000001c     rts6740.lib : _lock.obj (.cinit)
+                  11808168    0000000c     ISRs.obj (.cinit)
+                  11808174    00000004     --HOLE-- [fill = 0]
+                  11808178    0000000c     LCDK_Support_DSP.obj (.cinit)
                   11808184    00000004     --HOLE-- [fill = 0]
-                  11808188    0000000c     LCDK_Support_DSP.obj (.cinit)
+                  11808188    0000000c     rts6740.lib : fopen.obj (.cinit)
                   11808194    00000004     --HOLE-- [fill = 0]
-                  11808198    0000000c     rts6740.lib : fopen.obj (.cinit)
-                  118081a4    00000004     --HOLE-- [fill = 0]
-                  118081a8    00000004     (.pad.cinit) [fill = 0]
+                  11808198    00000004     (.pad.cinit) [fill = 0]
 
-.const     0    118081b0    0000015b     
-                  118081b0    00000101     rts6740.lib : ctype.obj (.const:.string:__ctypes_)
-                  118082b1    00000002                 : fputs.obj (.const:.string)
-                  118082b3    00000001     --HOLE-- [fill = 0]
-                  118082b4    00000034     main.obj (.const:.string)
-                  118082e8    00000023     rts6740.lib : _printfi.obj (.const:.string)
+.const     0    118081a0    0000015b     
+                  118081a0    00000101     rts6740.lib : ctype.obj (.const:.string:__ctypes_)
+                  118082a1    00000002                 : fputs.obj (.const:.string)
+                  118082a3    00000001     --HOLE-- [fill = 0]
+                  118082a4    00000034     main.obj (.const:.string)
+                  118082d8    00000023     rts6740.lib : _printfi.obj (.const:.string)
 
-.cio       0    11808310    00000120     UNINITIALIZED
-                  11808310    00000120     rts6740.lib : trgmsg.obj (.cio)
+.cio       0    11808300    00000120     UNINITIALIZED
+                  11808300    00000120     rts6740.lib : trgmsg.obj (.cio)
 
-.switch    0    11808430    00000018     
-                  11808430    00000018     LCDK_Support_DSP.obj (.switch:_SetSampleRate_AIC3106)
+.switch    0    11808420    00000018     
+                  11808420    00000018     LCDK_Support_DSP.obj (.switch:_SetSampleRate_AIC3106)
 
-.bss       0    11808448    0000000c     UNINITIALIZED
-                  11808448    00000008     ISRs.obj (.bss)
-                  11808450    00000004     LCDK_Support_DSP.obj (.bss)
+.bss       0    11808438    00000008     UNINITIALIZED
+                  11808438    00000004     ISRs.obj (.bss)
+                  1180843c    00000004     LCDK_Support_DSP.obj (.bss)
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
 address    name
 --------   ----
-11808448   $bss
-11808448   .bss
+11808438   $bss
+11808438   .bss
 11800200   .text
 118072e0   C$$EXIT
 11807078   C$$IO$$
@@ -219,7 +219,7 @@ address    name
 118002a8   _WriteLEDs
 11800548   _Write_I2C
 11800ee0   _Write_UART2
-11808310   __CIOBUF_
+11808300   __CIOBUF_
 11807c28   __STACK_END
 00000400   __STACK_SIZE
 00000400   __SYSMEM_SIZE
@@ -230,10 +230,10 @@ ffffffff   ___TI_pprof_out_hndl
 ffffffff   ___TI_prof_data_size
 ffffffff   ___TI_prof_data_start
 ffffffff   ___binit__
-11808448   ___bss__
+11808438   ___bss__
 ffffffff   ___c_args__
 11808028   ___cinit__
-11808454   ___end__
+11808440   ___end__
 11807360   ___etext__
 11807080   ___isinf
 ffffffff   ___pinit__
@@ -244,7 +244,7 @@ ffffffff   ___pinit__
 118063e0   __cleanup
 11807804   __cleanup_ptr
 11805020   __closefile
-118081b0   __ctypes_
+118081a0   __ctypes_
 11800fc0   __divd
 11806480   __divli
 11805fa0   __divu
@@ -273,7 +273,6 @@ ffffffff   ___pinit__
 118072e0   _abort
 11805860   _atoi
 11805be0   _autocorrelation
-11808448   _bytes
 11806d00   _c_int00
 11805940   _close
 118077e8   _coeff
@@ -284,7 +283,7 @@ ffffffff   ___pinit__
 11803300   _free
 11805260   _fseek
 118077a8   _input
-1180844c   _itr
+11808438   _itr
 118068e0   _lseek
 118061e0   _ltoa
 11805380   _main
@@ -308,7 +307,7 @@ ffffffff   ___pinit__
 11806e80   _xcorr
 ffffffff   binit
 11808028   cinit
-11808454   end
+11808440   end
 11807360   etext
 ffffffff   pinit
 
@@ -438,15 +437,14 @@ address    name
 11807c28   __sys_memory
 11808028   ___cinit__
 11808028   cinit
-118081b0   __ctypes_
-11808310   __CIOBUF_
-11808448   $bss
-11808448   .bss
-11808448   ___bss__
-11808448   _bytes
-1180844c   _itr
-11808454   ___end__
-11808454   end
+118081a0   __ctypes_
+11808300   __CIOBUF_
+11808438   $bss
+11808438   .bss
+11808438   ___bss__
+11808438   _itr
+11808440   ___end__
+11808440   end
 ffffffff   ___TI_pprof_out_hndl
 ffffffff   ___TI_prof_data_size
 ffffffff   ___TI_prof_data_start
@@ -456,4 +454,4 @@ ffffffff   ___pinit__
 ffffffff   binit
 ffffffff   pinit
 
-[138 symbols]
+[137 symbols]
