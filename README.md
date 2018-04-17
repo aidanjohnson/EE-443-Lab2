@@ -7,7 +7,7 @@ Complete:
 - Generates echo effect (using textbook code Ch. 10.5.1--see CD/code/chapter_10/ccs/Echo/ISRs_[A/B/C].c)
 
 Incomplete:
-- Confirmation of buffer delay 
+- N/A 
 
 ## Problem 2
 Status: Complete
@@ -32,13 +32,13 @@ Incomplete:
 - N/A
 
 ## Problem 4
-Status: In Progress
+Status: Complete
 
 Complete:
-- N/A
+- Pitch Shifter (entire problem)
 
 Incomplete:
-- Pitch Shifter (entire problem)
+- N/A
 
 
 ## Textbook
