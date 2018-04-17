@@ -9,7 +9,6 @@
 ///////////////////////////////////////////////////////////////////////
 
 #include "DSP_Config.h" 
-#include <stdio.h>
   
 // Data is received as 2 16-bit words (left/right) packed into one
 // 32-bit word.  The union allows the data to be accessed as a single 
@@ -26,39 +25,10 @@ volatile float output[NUM_SAMPLES];
 int bytes = sizeof(float);
 int itr = 0;
 
-//extern void stack(volatile float *in, int n, int b, volatile float *out);
-
 volatile union {
 	Uint32 UINT;
 	Int16 Channel[2];
 } CodecDataIn, CodecDataOut;
-
-void printArrays()
-///////////////////////////////////////////////////////////////////////
-// Purpose:   Codec interface interrupt service routine
-//
-// Input:     None
-//
-// Returns:   Nothing
-//
-// Calls:     CheckForOverrun, ReadCodecData, WriteCodecData
-//
-// Notes:     None
-///////////////////////////////////////////////////////////////////////
-{
-	int i;
-	printf("\nx[n] = [ ");
-	for (i = 0; i < NUM_SAMPLES; i++) {
-		printf("%.2f ", input[i]);
-	}
-	printf("]\n");
-
-	printf("x^[n] = [ ");
-	for (i = 0; i < NUM_SAMPLES; i++) {
-		printf("%.2f ", output[i]);
-	}
-	printf("]\n");
-}
 
 interrupt void Codec_ISR()
 ///////////////////////////////////////////////////////////////////////
@@ -80,14 +50,13 @@ interrupt void Codec_ISR()
   	CodecDataIn.UINT = ReadCodecData();		// get input data samples
 
   	if (itr < NUM_SAMPLES) {
-  		input[itr] = itr;//CodecDataIn.Channel[LEFT];
+  		input[itr] = CodecDataIn.Channel[LEFT]; //itr;
   		output[itr] = 0;
-  		itr++;
 	} else if (itr == NUM_SAMPLES) {
 		stack(input, NUM_SAMPLES, bytes, output);
-		printArrays();
-		itr++;
+		printArrays(input, output);
   	}
+  	itr++;
 
 	WriteCodecData(0);		// send output data to port
 }

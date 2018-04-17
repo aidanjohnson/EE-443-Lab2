@@ -8,6 +8,9 @@ main.obj: ../OMAPL138_defines.h
 main.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/c6x.h
 main.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/vect.h
 main.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/stdint.h
+main.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/stdio.h
+main.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/linkage.h
+main.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/stdarg.h
 
 ../main.c: 
 ../DSP_Config.h: 
@@ -17,3 +20,6 @@ main.obj: C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/stdint.h
 C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/c6x.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/vect.h: 
 C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/stdint.h: 
+C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/stdio.h: 
+C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/linkage.h: 
+C:/ti/ccsv6/tools/compiler/c6000_7.4.14/include/stdarg.h: 

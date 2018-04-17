@@ -9,7 +9,9 @@
 ///////////////////////////////////////////////////////////////////////
 
 #include "DSP_Config.h"
+#include <stdio.h>
 
+#define NUM_SAMPLES 512
 
 int main()
 {    
@@ -27,4 +29,30 @@ int main()
   	}   
 }
 
+void printArrays(volatile float * input, volatile float * output)
+///////////////////////////////////////////////////////////////////////
+// Purpose:   Codec interface interrupt service routine
+//
+// Input:     None
+//
+// Returns:   Nothing
+//
+// Calls:     CheckForOverrun, ReadCodecData, WriteCodecData
+//
+// Notes:     None
+///////////////////////////////////////////////////////////////////////
+{
+	int i = 0; // NOTE: this index writes over input[0]; likely exceeded memory
+	printf("\nx[n] = [ ");
+	for (i = 0; i < NUM_SAMPLES; i++) {
+		printf("%.2f ", input[i]);
+	}
+	printf("]\n");
+
+	printf("x^[n] = [ ");
+	for (i = 0; i < NUM_SAMPLES; i++) {
+		printf("%.2f ", output[i]);
+	}
+	printf("]\n");
+}
 
