@@ -45,7 +45,7 @@ void printArrays(volatile float * input, volatile float * output, time_t dur)
 	}
 	printf("]\n");
 
-	printf("Processing time: %f ms\n", dur);
+	printf("Processing time: %f us\n", dur);
 
 }
 
