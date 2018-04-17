@@ -9,6 +9,11 @@
 ///////////////////////////////////////////////////////////////////////
 
 #include "DSP_Config.h"
+#include <time.h>
+#include <stdio.h>
+
+#define NUM_SAMPLES 10		// Change to 1024
+#define NUM_AUTOCORR 5			// Change to 20
 
 int main()
 {    
@@ -25,4 +30,33 @@ int main()
   	}
 }
 
+void printArrays(volatile float * input, volatile float * output, time_t dur)
+///////////////////////////////////////////////////////////////////////
+// Purpose:   Codec interface interrupt service routine
+//
+// Input:     None
+//
+// Returns:   Nothing
+//
+// Calls:     CheckForOverrun, ReadCodecData, WriteCodecData
+//
+// Notes:     None
+///////////////////////////////////////////////////////////////////////
+{
+	int i;
+	printf("\nx[n] = [ ");
+	for (i = 0; i < NUM_SAMPLES; i++) {
+		printf("%.2f ", input[i]);
+	}
+	printf("]\n");
+
+	printf("R[k] = [ ");
+	for (i = 0; i < NUM_AUTOCORR; i++) {
+		printf("%.2f ", output[i]);
+	}
+	printf("]\n");
+
+	printf("Processing time: %d \n", dur);
+
+}
 

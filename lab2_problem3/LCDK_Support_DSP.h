@@ -10,6 +10,7 @@
 
 #ifndef	LCDK_SUPPORT_DSP_H_INCLUDED
 #define LCDK_SUPPORT_DSP_H_INCLUDED
+#include <time.h>
 
 #include "tistdtypes.h"
 #include "OMAPL138_defines.h"
@@ -60,5 +61,6 @@ Uint32 CheckForOverrun();
 // defined in StartUp.c (in application directory)
 void   StartUp();
 void   xcorr(volatile float *, int, int, volatile float *);
+void   printArrays(volatile float * input, volatile float * output, time_t dur);
 
 #endif

@@ -165,9 +165,11 @@ interrupt void Codec_ISR()
 			channDelay[B] = (float)MAX_DELAY/2;
 			channGain[A] = 0.0;
 			channGain[B] = 1.0;
+			WriteLEDs(3);
 		} else if (SW == 1) { 	// SW5 down, SW6 up:
 			upwardPitch = 1;
 			pitchShiftIsOn = 0;
+			WriteLEDs(2);
 		} else if (SW == 2) {	// SW5 up, SW6 down:
 			upwardPitch = 0;
 			pitchShiftIsOn = 1;
@@ -175,9 +177,11 @@ interrupt void Codec_ISR()
 			channDelay[B] = (float)MAX_DELAY/2;
   			channGain[A] = 0.0;
   			channGain[B] = 1.0;
+  			WriteLEDs(1);
 		} else if (SW == 3) { 	// SW5 down, SW6 down:
 			upwardPitch = 0;
 			pitchShiftIsOn = 0;
+			WriteLEDs(0);
 		}
 
 		prevSW = SW;
